@@ -11,7 +11,7 @@ sample = open(filename).read()
 for suspect in suspects.keys():  # loop through the suspects
     print ("Analysing %s ..." % suspect)
     guilty = True
-    for x in xrange(0, 4):  # loop through the 5 sequences for each suspect
+    for x in xrange(0, 5):  # loop through the 5 sequences for each suspect
         print("Looking for %s ..." % suspects[suspect][x])
         if sample.find(suspects[suspect][x]) == -1:
             guilty = False
