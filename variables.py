@@ -15,7 +15,7 @@ is_rainy = False  # boolean
 print(age)
 '''
 This will yield an error as the interpreter does not know about the encoding of the file
-add # coding: utf-8 as first line.
+add # coding: utf-8 as first line. (-> Bonus Exercise 7.3)
 '''
 
 # Print formatting
@@ -31,6 +31,11 @@ print("My name is %s and I am %d years old" % (name, age))  # interpolation -> b
 
 # Capturing variables
 #####################
+age = raw_input("Enter your age: ")
+print("Hurray! You are %s years old!" % age)
+'''
+Be aware, that raw_input always reads strings from the command line ...
+'''
 
 
 
