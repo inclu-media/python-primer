@@ -1,4 +1,4 @@
-# Defining a string variable
+ # Defining a string variable
 name = "Ninja Sensei Martin-san"
 
 # Some useful string operations
