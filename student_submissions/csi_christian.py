@@ -69,7 +69,7 @@ The clean solution would be to check each find for > -1:
 ... dna.find(gender_male) > -1 and dna.find(race_white) > -1 ...
 '''
 
-if dna.find(gender_male) and dna.find(race_white) and dna.find(hair_carrot) and dna.find(eye_brown) and dna.find(face_round) > -1:
+if dna.find(gender_male) > -1 and dna.find(race_white) and dna.find(hair_carrot) and dna.find(eye_brown) and dna.find(face_round) > -1:
     print "Ziga ate the ice cream"
 elif dna.find(gender_male) and dna.find(race_white) and dna.find(hair_black) and dna.find(eye_blue) and dna.find(face_oval) > -1:
     print "Matej at the ice cream"
