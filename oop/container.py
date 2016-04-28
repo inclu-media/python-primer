@@ -35,7 +35,7 @@ class Container:
         if not isinstance(target, Container):
             print("Can only pour into containers")
         else:
-            if self.__level < amount:
+            if self.__level <= amount:
                 print("There is not enough left for that")
             else:
                 if target.fill(amount):
