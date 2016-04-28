@@ -53,6 +53,24 @@ class Container:
         print("Level: " + str(self.__level))
         print("----------------------\n\n")
 
+class ContainerWithLid(Container):
+    __lid_open = False
+
+    def __init__(self, name, capacity):
+        Container.__init__(self, name, capacity)
+
+    def open(self):
+        self.__lid_open = True
+
+    def close(self):
+        self.__lid_open = False
+
+    def status(self):
+        if self.__lid_open:
+            print("The lid is open.")
+        else:
+            print("The lid is closed.")
+        Container.status(self)
 
 pot = Container("Kaffeekanne", 20)
 pot.fill(20)
@@ -64,6 +82,9 @@ cup.status()
 pot.pour(5, cup)
 cup.status()
 pot.status()
+
+pot_with_lid = ContainerWithLid("Tasse mit Deckel", 5)
+pot_with_lid.status()
 
 
 
