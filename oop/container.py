@@ -3,28 +3,35 @@ class Container:
     __level = 0
     __name = None
 
-    '''
-    Constructor
-    ''' 
     def __init__(self, name, capacity):
+        """
+        Construct a new container
+        :param name: the name of the container
+        :param capacity: amount of fluid fitting into the container
+        """
         self.__capacity = capacity
         self.__name = name
 
-    '''
-    A Method: fill amount fluid into this container
-    '''
     def fill(self, amount):
-            if self.__level + amount > self.__capacity:
-                print('Cannot hold this much')
-                return False
-            else:
-                self.__level += amount;
-                return True
+        """
+        Fill fluid into the container
+        :param amount: the amount of fluid to fill
+        :return: True, False if over-capacity
+        """
+        if self.__level + amount > self.__capacity:
+            print('Cannot hold this much')
+            return False
+        else:
+            self.__level += amount
+            return True
 
-    '''
-    A Method: pour amount fluid from this container into a target container
-    '''
     def pour(self, amount, target):
+        """
+        Pour fluid into another container from this container
+        :param amount: the amount of fluid to pour
+        :param target: the target container
+        :return: None
+        """
         if not isinstance(target, Container):
             print("Can only pour into containers")
         else:
@@ -36,10 +43,11 @@ class Container:
                 else:
                     print("The target cannot hold this much!")
 
-    '''
-    A Method: print the status of this container
-    '''
     def status(self):
+        """
+        Print the status of a container
+        :return: None
+        """
         print("Name: " + self.__name)
         print("Capacity: " + str(self.__capacity))
         print("Level: " + str(self.__level))

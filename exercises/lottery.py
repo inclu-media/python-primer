@@ -10,6 +10,7 @@ def lotto_numbers(quant):
             rand = random.randint(0, 46)
         numbers.append(rand)
 
+
     return numbers
 
 count = raw_input("How many lottery numbers do you want to generate?")
